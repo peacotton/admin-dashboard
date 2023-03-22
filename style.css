@@ -59,15 +59,15 @@
 }
 
 .header-icon {
-    height: 25px;
+    height: 20px;
 }
 
 #search {
     grid-area: search;
-    border: 1px solid black;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    padding-left: 25px;
 }
 
 #search input {
@@ -76,17 +76,42 @@
 
 #profile {
     grid-area: profile;
-    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+    padding-right: 25px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#profile .profile-icon {
+    height: 20px;
+    border-radius: 50%;
 }
 
 #greeting {
     grid-area: greeting;
-    border: 1px solid black;
+    display: flex;
+    font-size: 8px;
+    align-items: center;
+    padding-left: 25px;
+    gap: 10px;
+}
+
+#greeting .profile-icon {
+    height: 40px;
+    border-radius: 50%;
+}
+
+#greeting div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 #buttons {
     grid-area: buttons;
-    border: 1px solid black;
     display: flex;
     gap: 10px;
     justify-content: center;
