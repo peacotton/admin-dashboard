@@ -1,0 +1,230 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+#body {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 150px  1fr;
+    grid-template-rows: 100px 1fr;
+    grid-template-areas: "sidebar header"
+    "sidebar content";
+}
+
+#sidebar {
+    grid-area: sidebar;
+    background-color: #049cca; 
+}
+
+#nav {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-weight: 700;
+    color: white;
+}
+
+.logo {
+    font-size: 16px;
+    height: 3em;
+    padding: 10px;
+    display: flex;
+    gap: 5px; 
+}
+
+.icon {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(287deg) brightness(105%) contrast(102%);
+    height: 1em;
+    vertical-align:-0.1875em;
+}
+
+.nav-item {
+    font-size: 12px;
+    display: flex;
+    height: 1em;
+    padding: 10px;
+    place-items: center;
+    gap: 10px;
+}
+
+#header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "search profile" "greeting buttons";
+}
+
+.header-icon {
+    height: 25px;
+}
+
+#search {
+    grid-area: search;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#search input {
+    width: 90%;
+}
+
+#profile {
+    grid-area: profile;
+    border: 1px solid black;
+}
+
+#greeting {
+    grid-area: greeting;
+    border: 1px solid black;
+}
+
+#buttons {
+    grid-area: buttons;
+    border: 1px solid black;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+#buttons button {
+    font-size: 0.5rem;
+    background-color:#049cca;
+    border-radius: 15px;
+    color: white;
+    width: 25%;
+    height: 35%;
+    border: none;
+
+}
+
+#content {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1em 1fr 1fr;
+    grid-area: content;
+    background-color: #d6eaf0;
+    padding: 15px;
+}
+
+#titles {
+    display: grid;
+    grid-column: 1/3;
+    grid-template-columns: 3fr 1fr;
+    align-items: end;
+}
+
+#titles p {
+    padding-bottom: 5px;
+}
+#titles p.right-title {
+    padding-left: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#cards {
+    display: grid;
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    padding-top: 5px;
+    
+}
+
+.card {
+    height: 100px;
+    box-shadow: 2px 2px 2px rgb(216, 215, 215);
+    border-left: 3px solid orange;
+    font-size: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.card,
+.announcement,
+.trend {
+    background-color: white;
+    border-radius: 5px;
+}
+
+.card:nth-child(2n+1) {
+    grid-column: 1;
+}
+
+.card p {
+    height: 50%;
+    font-size: 8px;
+    overflow: scroll;
+}
+
+.icon-bar {
+    display: flex;
+    gap: 10px;
+    align-self: flex-end;
+    margin-top: auto;
+}
+
+.favorite, 
+.watch,
+.share {
+    height: 15px;
+}
+
+#feed {
+    display: grid;
+    padding-left: 15px;
+    grid-row: 2/3;
+    padding-top: 5px;
+}
+
+.announcement {   
+    height: 1fr;
+    gap: 0px;
+}
+
+#trending {
+    display: grid;
+    padding-left: 15px;
+    grid-row: 3/4;
+}
+
+.trend {
+    height: 1fr;
+}
+
+.title {
+    align-self: end;
+    padding-bottom: 5px;
+}
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #2e2e2e #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #2e2e2e;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
