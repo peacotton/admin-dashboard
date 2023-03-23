@@ -2,7 +2,10 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: 'Montserrat';
 }
+
+
 
 #body {
     display: grid;
@@ -32,7 +35,7 @@
 }
 
 .logo {
-    font-size: 30px;
+    font-size: 25px;
     height: 3em;
     padding: 10px;
     display: flex;
@@ -252,11 +255,11 @@
 
 .announcement p {
     overflow: scroll;
-    height: 80%;
+    height: 70%;
 }
 
 .announcement h4 {
-    height: 20%;
+    height: 30%;
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -274,6 +277,7 @@
     display: grid;
     grid-template-columns: 50px 1fr;
     grid-template-rows: 1fr 1fr;
+    font-family: 'Alkatra';
 }
 
 .trend .profile-icon {
