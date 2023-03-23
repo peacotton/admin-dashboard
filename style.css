@@ -103,9 +103,11 @@
     font-weight: bold;
 }
 
-#search .profile-icon {
+.profile-icon {
     height: 40px;
+    width: 40px;
     border-radius: 50%;
+    background-color: rgb(96, 92, 94);
 }
 
 #greeting {
@@ -119,6 +121,7 @@
 
 #greeting .profile-icon {
     height: 60px;
+    width: 60px;
     border-radius: 50%;
 }
 
@@ -157,6 +160,7 @@
     grid-area: content;
     background-color: #d6eaf0;
     padding: 15px;
+    gap: 15px;
 }
 
 /* Titles */
@@ -187,7 +191,6 @@
     grid-row: 2 / 4;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 15px;
-    padding-top: 5px;
     
 }
 
@@ -196,7 +199,6 @@
     box-shadow: 2px 2px 2px rgb(216, 215, 215);
     border-left: 3px solid orange;
     font-size: 16px;
-    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -207,6 +209,7 @@
 .trend {
     background-color: white;
     border-radius: 5px;
+    padding: 15px;
 }
 
 .card:nth-child(2n+1) {
@@ -218,6 +221,7 @@
     font-size: 16px;
     overflow: scroll;
 }
+
 
 .icon-bar {
     display: flex;
@@ -236,14 +240,25 @@
 
 #feed {
     display: grid;
-    padding-left: 15px;
     grid-row: 2/3;
-    padding-top: 5px;
+    gap: 10px;
+    background-color: #d6eaf0;
+    background-clip: content-box;
 }
 
 .announcement {   
-    height: 1fr;
-    gap: 0px;
+    height: 100px;
+}
+
+.announcement p {
+    overflow: scroll;
+    height: 80%;
+}
+
+.announcement h4 {
+    height: 20%;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* trending */
@@ -255,8 +270,16 @@
 }
 
 .trend {
-    height: 1fr;
+    height: 70px;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: 1fr 1fr;
 }
+
+.trend .profile-icon {
+    grid-row: 1/3;
+}
+
 
 .title {
     align-self: end;
@@ -267,13 +290,13 @@
 /* ===== Scrollbar ===== */
   /* Firefox */
   * {
-    scrollbar-width: auto;
-    scrollbar-color: #2e2e2e #ffffff;
+    display: hidden;
   }
 
   /* Chrome, Edge, and Safari */
   *::-webkit-scrollbar {
-    width: 10px;
+    width: 0px;
+    height: 0px;
   }
 
   *::-webkit-scrollbar-track {
@@ -281,7 +304,8 @@
   }
 
   *::-webkit-scrollbar-thumb {
-    background-color: #2e2e2e;
+    /* background-color: #2e2e2e;
     border-radius: 10px;
-    border: 3px solid #ffffff;
+    border: 3px solid #ffffff; */
+    display: hidden;
   }
