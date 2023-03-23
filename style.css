@@ -13,6 +13,8 @@
     "sidebar content";
 }
 
+/* ===== SIDEBAR ===== */
+
 #sidebar {
     grid-area: sidebar;
     background-color: #049cca; 
@@ -54,11 +56,13 @@
     gap: 10px;
 }
 
+/* ===== HEADER ===== */
+
 #header {
     grid-area: header;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-areas: "search profile" "greeting buttons";
+    grid-template-areas: "search search" "greeting buttons";
 }
 
 .header-icon {
@@ -71,26 +75,35 @@
     align-items: center;
     justify-content: flex-start;
     padding-left: 25px;
-    gap: 10px;  
+    padding-right: 5%;
+    font-size: 24px;
+    font-weight: bold;  
 }
 
-#search input {
-    width: 80%;
+#search-bar {
+    display: flex;
+    flex: 2;
+    align-items: center;
+    height: 100%;
+}
+
+#search-bar input {
+    width: 70%;
     height: 50%;
 }
 
 #profile {
     grid-area: profile;
     display: flex;
+    flex: 1;
     align-items: center;
     justify-content: flex-end;
-    gap: 15px;
-    padding-right: 10%;
+    gap: 10%;
     font-size: 24px;
     font-weight: bold;
 }
 
-#profile .profile-icon {
+#search .profile-icon {
     height: 40px;
     border-radius: 50%;
 }
@@ -135,6 +148,8 @@
     overflow: hidden;
 }
 
+/* ===== CONTENT ===== */
+
 #content {
     display: grid;
     grid-template-columns: 3fr 1fr;
@@ -143,6 +158,8 @@
     background-color: #d6eaf0;
     padding: 15px;
 }
+
+/* Titles */
 
 #titles {
     font-size: 24px;
@@ -161,6 +178,8 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+/* Cards */
 
 #cards {
     display: grid;
@@ -213,6 +232,8 @@
     height: 30px;
 }
 
+/* Feed */
+
 #feed {
     display: grid;
     padding-left: 15px;
@@ -224,6 +245,8 @@
     height: 1fr;
     gap: 0px;
 }
+
+/* trending */
 
 #trending {
     display: grid;
@@ -238,9 +261,10 @@
 .title {
     align-self: end;
     padding-bottom: 5px;
+    font-size: 24px;
 }
 
-/* ===== Scrollbar CSS ===== */
+/* ===== Scrollbar ===== */
   /* Firefox */
   * {
     scrollbar-width: auto;
