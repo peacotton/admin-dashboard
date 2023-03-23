@@ -7,8 +7,8 @@
 #body {
     display: grid;
     height: 100vh;
-    grid-template-columns: 150px  1fr;
-    grid-template-rows: 100px 1fr;
+    grid-template-columns: 200px  1fr;
+    grid-template-rows: 150px 1fr;
     grid-template-areas: "sidebar header"
     "sidebar content";
 }
@@ -22,14 +22,15 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     align-items: flex-start;
     font-weight: 700;
     color: white;
+    gap: 10px;
 }
 
 .logo {
-    font-size: 16px;
+    font-size: 30px;
     height: 3em;
     padding: 10px;
     display: flex;
@@ -43,11 +44,13 @@
 }
 
 .nav-item {
-    font-size: 12px;
+    font-size: 20px;
     display: flex;
     height: 1em;
     padding: 10px;
-    place-items: center;
+    padding-left: 10%;
+    align-items: center;
+    width: 100%;
     gap: 10px;
 }
 
@@ -59,7 +62,7 @@
 }
 
 .header-icon {
-    height: 20px;
+    height: 40px;
 }
 
 #search {
@@ -68,10 +71,12 @@
     align-items: center;
     justify-content: flex-start;
     padding-left: 25px;
+    gap: 10px;  
 }
 
 #search input {
-    width: 90%;
+    width: 80%;
+    height: 50%;
 }
 
 #profile {
@@ -80,34 +85,34 @@
     align-items: center;
     justify-content: flex-end;
     gap: 15px;
-    padding-right: 25px;
-    font-size: 12px;
+    padding-right: 10%;
+    font-size: 24px;
     font-weight: bold;
 }
 
 #profile .profile-icon {
-    height: 20px;
+    height: 40px;
     border-radius: 50%;
 }
 
 #greeting {
     grid-area: greeting;
     display: flex;
-    font-size: 8px;
+    font-size: 16px;
     align-items: center;
     padding-left: 25px;
     gap: 10px;
 }
 
 #greeting .profile-icon {
-    height: 40px;
+    height: 60px;
     border-radius: 50%;
 }
 
 #greeting div {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 10px;
 }
 
 #buttons {
@@ -119,26 +124,28 @@
 }
 
 #buttons button {
-    font-size: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
     background-color:#049cca;
     border-radius: 15px;
     color: white;
     width: 25%;
     height: 35%;
-    border: none;
-
+    border: 1px solid #049cca;
+    overflow: hidden;
 }
 
 #content {
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1em 1fr 1fr;
+    grid-template-rows: 1.5em 1fr 1fr;
     grid-area: content;
     background-color: #d6eaf0;
     padding: 15px;
 }
 
 #titles {
+    font-size: 24px;
     display: grid;
     grid-column: 1/3;
     grid-template-columns: 3fr 1fr;
@@ -148,6 +155,7 @@
 #titles p {
     padding-bottom: 5px;
 }
+
 #titles p.right-title {
     padding-left: 15px;
     overflow: hidden;
@@ -165,10 +173,10 @@
 }
 
 .card {
-    height: 100px;
+    height: 200px;
     box-shadow: 2px 2px 2px rgb(216, 215, 215);
     border-left: 3px solid orange;
-    font-size: 8px;
+    font-size: 16px;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -188,7 +196,7 @@
 
 .card p {
     height: 50%;
-    font-size: 8px;
+    font-size: 16px;
     overflow: scroll;
 }
 
@@ -202,7 +210,7 @@
 .favorite, 
 .watch,
 .share {
-    height: 15px;
+    height: 30px;
 }
 
 #feed {
